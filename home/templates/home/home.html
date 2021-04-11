@@ -1,0 +1,38 @@
+{% extends 'base/base.html' %}
+{% block nombre %}
+<div class="panel-body">
+    <table width="100%" \
+    class="table 
+    table-striped 
+    table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>
+                    id cancion
+                </th>
+                <th>
+                    Nombre
+                </th>
+                <th>
+                    Autor
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in obj %}
+            <tr>
+                <td>
+                    {{item.id}}
+                </td>
+                <td>
+                    {{item.nombre}}
+                </td>
+                <td>
+                    {{item.autor}}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock nombre %}
